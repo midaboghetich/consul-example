@@ -1,0 +1,14 @@
+
+
+spring:
+  application:
+    name: travel-client
+  cloud:
+    consul:
+      discovery:
+        instanceId: ${spring.application.name}:${random.value}
+        healthCheckPath: /travel-hc
+        healthCheckInterval: 20s
+server:
+  port: 9191
+
